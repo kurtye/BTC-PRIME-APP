@@ -1,0 +1,161 @@
+page-account-security {
+
+  #page-receiver #divider-row {
+    border-bottom: 1px solid #BBAB73;
+    border-top: 1px solid #BBAB73;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+
+  #page-send {
+    font-size: 1.6rem;
+
+    .descriptions {
+      @extend .vertical-align;
+      font-size: 1.2rem;
+    }
+
+    .vertical-align {
+      display: inline-grid;
+      align-content: center;
+      align-items: center;
+    }
+
+    .select-itens {
+      max-width: 100%;
+      font-weight: 400;
+
+      .select-text {
+        text-transform: uppercase;
+
+        &::after {
+          content: '';
+          bottom: -14px;
+          pointer-events: none;
+          border-top: 10px solid;
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+          color: color($colors, 'primary');
+          position: relative;
+          margin-left: 5px;
+        }
+
+        & + .select-icon {
+          display: none;
+        }
+      }
+
+    }
+
+    .select-itens-body {
+      max-width: 100%;
+      font-weight: 400;
+
+      &::after {
+        content: '';
+        bottom: -5px;
+        pointer-events: none;
+        border-top: 10px solid;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        color: color($colors, 'primary');
+        position: relative;
+        margin-left: 4px;
+      }
+
+      .select-icon {
+        display: none;
+      }
+    }
+
+    ion-item.item {
+      background-color: initial;
+      color: $text-color;
+    }
+
+    .item-md.item-block .item-inner {
+      border-bottom: 0px;
+    }
+
+    #coin-selected {
+      position: absolute;
+      bottom: 25%;
+    }
+
+    .info-title {
+      @extend .vertical-align;
+      color: color($colors, 'dark');
+      opacity: 0.2;
+      min-height: 55px;
+      padding-left: 25px;
+    }
+
+    .info-title-2 {
+      @extend .vertical-align;
+      color: color($colors, 'dark');
+      opacity: 0.2;
+    }
+
+    #divider-row {
+      border-bottom: 1px solid color($colors, 'primary');
+      border-top: 1px solid color($colors, 'primary');
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .select-md .select-icon {
+      width: 15px;
+      margin-left: 5px;
+
+      .select-icon-inner {
+        left: 0px;
+        border-top: 10px solid;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        color: color($colors, 'primary');
+      }
+    }
+
+    #btn-send {
+      text-transform: lowercase;
+    }
+
+  }
+
+  .button-ios {
+    border-radius: 15px;
+    height: 1.8em;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #BBAB73;
+    margin: 0.4rem 0.2rem;
+    padding: 0 2em;
+  }
+  .row{
+    margin-top: 36px;
+  }
+
+  textarea.text-input.text-input-ios {
+    height: 168px;
+  }
+
+  .item.item-textarea {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    border-radius: 10px;
+    border: 1px solid #b9a977;
+  }
+
+}
+ion-row#divider-row {
+  border-bottom: 2px solid #b9a977;
+}
+
+
+

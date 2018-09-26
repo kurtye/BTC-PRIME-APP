@@ -1,0 +1,75 @@
+#tabsController {
+
+  .show-tabbar {
+    padding: 1vh 0 2vh 0;
+  }
+
+
+
+  .fa-icons-general {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transform: translate(0, 0);
+      margin-top: 2px;
+      width: 3rem;
+  }
+
+  .ion-ios-fa-send::before,
+  .ion-ios-fa-send-outline::before,
+  .ion-md-fa-send::before {
+      @extend .fa-icons-general;
+      content: url('../../assets/img/icons/send.svg');
+
+  }
+  .ion-ios-fa-send[ng-reflect-is-active="true"]::before,
+  .ion-ios-fa-send-outline[ng-reflect-is-active="true"]::before,
+  .ion-md-fa-send[ng-reflect-is-active="true"]::before {
+      content: url('../../assets/img/icons/send-b.svg');
+    }
+
+  .ion-ios-fa-home::before,
+  .ion-ios-fa-home-outline::before,
+  .ion-md-fa-home::before {
+      @extend .fa-icons-general;
+      content: url('../../assets/img/icons/home.svg');
+
+  }
+  .ion-ios-fa-home[ng-reflect-is-active="true"]::before,
+  .ion-ios-fa-home-outline[ng-reflect-is-active="true"]::before,
+  .ion-md-fa-home[ng-reflect-is-active="true"]::before {
+        content: url('../../assets/img/icons/home-b.svg');
+  }
+
+
+  .ion-ios-fa-transaction::before,
+  .ion-ios-fa-transaction-outline::before,
+  .ion-md-fa-transaction::before {
+      @extend .fa-icons-general;
+      width: 2rem;
+      content: url('../../assets/img/icons/transactions.svg');
+
+  }
+  .ion-ios-fa-transaction[ng-reflect-is-active="true"]::before,
+  .ion-ios-fa-transaction-outline[ng-reflect-is-active="true"]::before,
+  .ion-md-fa-transaction[ng-reflect-is-active="true"]::before {
+      content: url('../../assets/img/icons/transactions-b.svg');
+  }
+
+  .ion-ios-fa-rceiver::before,
+  .ion-ios-fa-rceiver-outline::before,
+  .ion-md-fa-rceiver::before {
+      @extend .fa-icons-general;
+      content: url('../../assets/img/icons/receiver.svg');
+
+  }
+  .ion-ios-fa-rceiver[ng-reflect-is-active="true"]::before,
+  .ion-ios-fa-rceiver-outline[ng-reflect-is-active="true"]::before,
+  .ion-md-fa-rceiver[ng-reflect-is-active="true"]::before {
+    content: url('../../assets/img/icons/receiver-b.svg');
+  }
+
+}

@@ -1,0 +1,15 @@
+@import '../pin/pin.scss';
+
+  #page-pin {
+
+    .qr-title {
+      font-family: Roboto;
+      font-weight: 600;
+    }
+
+    .scroll-content {
+      display: inline-grid;
+      align-content: center;
+      align-items: center;
+    }
+  }

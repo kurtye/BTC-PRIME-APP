@@ -1,0 +1,96 @@
+
+<ion-content padding id="page-pin">
+
+  <ion-grid style="height: 100%;">
+
+    <ion-row class="row">
+      <ion-col col-12>
+        <img id="logo" class="logo-page-pin" src="../../assets/img/logo2.png" />
+      </ion-col>
+      <ion-col col-12 class="cont-title page-in">
+        <span class="insert-pin">Por favor, insira o PIN</span>
+      </ion-col>
+      <ion-col col-12 class="pins page-pin">
+        <ion-icon *ngFor="let pin of getPins()" [class.pin-off]="pin == false"  [class.pin-on]="pin == true"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row" id="keyboard">
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="addPin(1)">
+          <ion-icon class="number-pin">{{ 1 }}</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="addPin(2)">
+          <ion-icon class="number-pin">{{ 2 }}</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="addPin(3)">
+          <ion-icon class="number-pin">{{ 3 }}</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="addPin(4)">
+          <ion-icon class="number-pin">{{ 4 }}</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="addPin(5)">
+          <ion-icon class="number-pin">{{ 5 }}</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="addPin(6)">
+          <ion-icon class="number-pin">{{ 6 }}</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="addPin(7)">
+          <ion-icon class="number-pin">{{ 7 }}</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="addPin(8)">
+          <ion-icon class="number-pin">{{ 8 }}</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="addPin(9)">
+          <ion-icon class="number-pin">{{ 9 }}</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="reset-pin-button" (click)="esqueciPin()">
+          <ion-icon class="forget-pin">esqueci meu PIN</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="addPin(0)">
+          <ion-icon class="number-pin">{{ 0 }}</ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col class="number" col-4>
+        <button round clear ion-button icon-only class="number-button" (click)="removePin()">
+          <ion-icon name="backspace"></ion-icon>
+        </button>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

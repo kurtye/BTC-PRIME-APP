@@ -1,0 +1,135 @@
+page-modalpin {
+
+
+
+
+  #page-pin {
+    background-image: url(../../assets/img/background-pin.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    .grid{
+      padding-top: 16px;
+    }
+    background-color: color($colors, 'header');
+    .qr-title{
+
+      color:#E89E52;
+      font-weight: 200 !important;
+      font-size: 1.2em;
+    }
+    .page-in.cont-title{
+      margin-top: 1.9em !important;
+    }
+    .cont-title{
+      margin-top: 4em;
+      margin-bottom: 1em;
+    }
+    .vertical-align {
+      display: inline-grid;
+      align-content: center;
+      align-items: center;
+    }
+
+    .scroll-content {
+      @extend .vertical-align;
+    }
+
+
+    .row {
+      text-align: center;
+    }
+
+    #logo {
+      margin: 0 auto;
+      width: 56px;
+    }
+    .logo-page-pin{
+      width: 95px !important;
+    }
+
+    .insert-pin {
+      color: #ffffff;
+      font-size: 1.3em;
+      font-weight: 200;
+    }
+
+    #keyboard {
+      text-align: center;
+
+      .number {
+        margin: 0 auto;
+
+        &:nth-last-child(2) {
+          margin: 0 0 0 auto;
+        }
+
+        &:nth-last-child(1) {
+          margin: 0;
+        }
+
+        .number-button {
+          border: 0.5px solid #272522;
+          padding: 27px 11px;
+          font-size: 12px;
+
+          .number-pin {
+            font-family: 'Lato', sans-serif !important;
+            font-weight: 400;
+            color: #FBB056;
+          }
+        }
+
+        .reset-pin-button {
+          padding: 0;
+          margin: 22px 0;
+        }
+      }
+
+      .forget-pin {
+        font-size: 1.2rem;
+        color: $color-reset-pin;
+        font-family: 'Lato', sans-serif !important;
+      }
+    }
+
+    .pins.page-pin{
+      margin-bottom: 1em !important;
+    }
+    .pins {
+      margin-bottom: 4em;
+      .pin-off {
+        width: 8.4% !important;
+        height:0px !important;
+        padding-top: 8%;
+        border-radius: 50%;
+        margin: 0px 8px;
+        border: 1px solid #695743;
+        margin-right: 14px;
+      }
+      .pin-on {
+        @extend .pin-off;
+        background-color: #FBB056;
+      }
+
+    }
+
+  }
+
+  .ios{
+    #page-pin{
+      .cont-title {
+        margin-top: 1.8em !important;
+      }
+      .pins{
+        margin-bottom: 1em !important;
+      }
+      .pins .pin-off, .pins .pin-on {
+        width: 8.4% !important;
+        height:0px !important;
+        padding-top: 8%;
+      }
+    }
+  }
+
+
+}

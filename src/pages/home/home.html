@@ -1,0 +1,94 @@
+
+<app-header showMenu="true">
+<ion-navbar>
+
+</ion-navbar>
+
+  </app-header>
+<ion-content id="page6" style="background: #F8F7EF !important;">
+
+
+  <ion-grid class="content-header" >
+    <ion-row>
+      <ion-col col-4>
+        <ion-label class="username">{{userInfo.usuario}}</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <div class="balance-info">
+          <span class="increment">+5,00%</span>
+          <label class="balance">
+            <span class="dollar-sign">R$</span> 26.476,00</label>
+        </div>
+      </ion-col>
+      <ion-col col-4 align-self-end>
+        <ion-item color="header" no-lines>
+          <ion-select class="select-itens" interface="action-sheet" cancelText="Cancelar" okText="OK">
+            <ion-option value="0" selected>BTC</ion-option>
+            <ion-option value="1">ETH</ion-option>
+            <ion-option value="2">BRL</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div padding>
+
+    <h3 class="title">
+      SALDOS
+    </h3>
+    <doughnut-chart></doughnut-chart>
+
+    <card
+      title="PREÇO DO BITCOIN"
+      value="24519.44"
+      buttonLabel="Ver gráficos"
+      (onTap)="onTopCard($event)"
+    >
+    </card>
+
+    <card
+      title="PREÇO DO ETHEREUM"
+      value="1719.19"
+      buttonLabel="Ver gráficos"
+      (onTap)="onTopCard"
+    >
+    </card>
+
+    <div class="spacer" style="width:100%;height:25px;"></div>
+    <h3 class="title-group">
+      MEUS GRUPOS
+    </h3>
+
+    <group
+      groupId="1909742047"
+      value="10200.00"
+      by="1TH/S"
+      btnDisabled="true"
+      >
+    </group>
+
+    <card2 value="1024.00"></card2>
+
+    <group
+      groupId="190900000"
+      value="8160.00"
+      by="1TH/S"
+      btnDisabled="true"
+      [dates]="dates2">
+    </group>
+
+    <group
+      groupId="1909742047"
+      value="22440.00"
+      by="9TH/S"
+      btnDisabled="true"
+      [dates]="dates3">
+    </group>
+
+    <div class="spacer" style="width:100%;height:15vh;"></div>
+
+  </div>
+</ion-content>
+
+

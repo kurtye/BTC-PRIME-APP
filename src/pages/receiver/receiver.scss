@@ -1,0 +1,108 @@
+#page-receiver {
+  font-size: 1.6rem;
+
+  #divider-row{
+    .info-title-2{
+      font-size: 19px;
+    }
+    .info-number{
+      font-size: 22px; 
+      font-weight: 200;
+    }
+  }
+  .descriptions {
+    @extend .vertical-align;
+    font-size: 1.3rem;
+    font-weight: 100;
+  }
+
+  .vertical-align {
+    display: inline-grid;
+    align-content: center;
+    align-items: center;
+  }
+
+  .select-itens {
+    max-width: 100%;
+    font-weight: 400;
+
+    .select-text {
+      text-transform: uppercase;
+
+      &::after {
+        content: '';
+        bottom: -14px;
+        pointer-events: none;
+        border-top: 10px solid;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        color: color($colors, 'primary');
+        position: relative;
+        margin-left: 5px;
+      }
+
+      & + .select-icon {
+        display: none;
+      }
+    }
+  }
+
+  ion-item.item {
+      background-color: initial;
+      color: $text-color;
+  }
+
+  .item-md.item-block .item-inner {
+      border-bottom: 0px;
+  }
+
+  #coin-selected {
+    position: absolute;
+    bottom: 25%;
+  }
+
+  .info-title {
+    @extend .vertical-align;
+    color: color($colors, 'dark');
+    opacity: 0.2;
+    min-height: 55px;
+    padding-left: 25px;
+  }
+
+  .info-title-2 {
+    @extend .vertical-align;
+    color: color($colors, 'dark');
+    opacity: 0.5;
+  }
+
+  #divider-row {
+      border-bottom: 1px solid color($colors, 'primary');
+      border-top: 1px solid color($colors, 'primary');
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 0px;
+      margin-bottom: 15px;
+  }
+
+  .select-md .select-icon {
+    width: 15px;
+    margin-left: 5px;
+
+    .select-icon-inner {
+      left: 0px;
+      border-top: 10px solid;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+      color: color($colors, 'primary');
+    }
+  }
+
+  #qr-code-container {
+    margin: 10px auto;
+  }
+
+  #btn-receiver {
+    text-transform: lowercase;
+  }
+
+}

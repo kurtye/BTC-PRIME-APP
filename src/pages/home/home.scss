@@ -1,0 +1,147 @@
+page-home {
+
+  .ion-page.show-page {
+    background-color: #F8F7EF !important;
+  }
+  .title-group{
+
+    color: #606060;
+    font-weight: 200;
+    font-size: 18px;
+    margin-top: 29px;
+  }
+  .select-itens {
+    max-width: 100%;
+    font-weight: 500;
+    color: color($colors, 'light');
+    opacity: 0.5;
+    font-size: 2.4rem;
+    padding: 0;
+
+
+    .select-text {
+      text-transform: uppercase;
+      font-weight: 100;
+
+      &::after {
+        content: '';
+        bottom: -20px;
+        pointer-events: none;
+        border-top: 10px solid;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        color: color($colors, 'primary');
+        position: relative;
+        margin-left: 5px;
+      }
+
+      & + .select-icon {
+        display: none;
+      }
+    }
+
+  }
+
+
+  .title {
+    font-weight: 200;
+    margin-top: 8px !important;
+    font-size: 18px;
+    color:#ADA893;
+  }
+
+  .content-header {
+    margin: 0;
+    background-color: #1C1C1C;
+    color: $text-color;
+    max-height: 112px;
+
+    .item-md-header,.item-ios-header {
+      background-color: #1C1C1C;
+  }
+    .username {
+      font-weight: 500;
+      padding-left: 10px;
+      color: #D3C9A1;
+      font-size: 17px;
+    }
+
+    .balance-info {
+      width: 100%;
+      text-align: right;
+
+      .increment {
+        display: block;
+        color: #2AC426;
+        font-size: 0.8em;
+      }
+      .balance {
+        display: block;
+        margin: 0;
+        font-weight: 400;
+        color: #d2c7a3;
+
+        .dollar-sign {
+          font-size: 0.6em;
+          color: #D3C9A1;
+        }
+      }
+    }
+
+  }
+
+  .label-coin {
+    margin-right: -50px;
+    text-align: right;
+    font-size: 1.4em;
+    margin-top: 0;
+    padding-top: 0px;
+    padding-right: 18px;
+    font-weight: 700;
+    opacity: 0.6;
+  }
+
+  .card2 .info-row .info .subtitle {
+    display: block;
+    font-size: 0.5em;
+  }
+
+  .card2 .info-row .info .title {
+    display: block;
+    color: #000000;
+    font-size: 0.9em;
+  }
+
+  .card2 .button-inner {
+    text-transform: none;
+    font-weight: 300;
+    font-size: 12px;
+    margin-left: 4px;
+  }
+
+  .card2 .info-row .value h1 {
+    color: #696969;
+    font-size: 0.89em;
+    padding-left: 7px;
+  }
+
+  .card .button-inner {
+    text-transform: none;
+    font-weight: 300;
+    font-size: 19px;
+    padding-left: 0px;
+  }
+
+  .group .buttom-row .buttom-datail {
+    padding: 24px 27px;
+  }
+
+  .content-header .username {
+    font-weight: 500;
+    padding-left: 10px;
+    color: #D3C9A1;
+    font-size: 14px;
+  }
+
+
+}

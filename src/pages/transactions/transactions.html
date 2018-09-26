@@ -1,0 +1,66 @@
+<app-header></app-header>
+<ion-content id="page-transactions"  style="background: #F8F7EF !important;">
+
+  <ion-card class="content-header" id="menu-card-in-account-header">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <h3>
+            <span>disponivel</span>
+            <br> saldo R$ 45.432,32
+          </h3>
+        </ion-col>
+        <ion-col col-6>
+          <div class="centralizer">
+            <img id="coin-selected" [src]="icons[coin]" />
+            <ion-item>
+              <ion-select class="select-itens" [(ngModel)]="coin" interface="action-sheet" cancelText="Cancelar" okText="OK">
+                <ion-option value="0" selected>BITCOIN</ion-option>
+                <ion-option value="1">ETHEREUM</ion-option>
+                <ion-option value="2">REAL</ion-option>
+              </ion-select>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-grid padding>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label style="display: contents;">MÊS</ion-label>
+          <ion-datetime
+            placeholder="----/----"
+            displayFormat="MMMM/YYYY"
+            min="2018-01"
+            max="2018-07"
+            cancelText="Cancelar"
+            doneText="OK"
+            [(ngModel)]="date"
+            (ngModelChange)="selectedDate($event)"></ion-datetime>
+        </ion-item>
+      </ion-col>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label style="display: contents;">DIA</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+      <ion-grid id="days-container">
+
+        <ion-row class="row-day" *ngFor="let day of monthHistory">
+          <ion-col col-3 class="day">{{ day['day'] }}</ion-col>
+          <ion-col col-3 class="" text-center>{{ day['status'] }}</ion-col>
+          <ion-col col-3 class="coin-name" text-center>{{ day['coin_name'] }}</ion-col>
+          <ion-col col-3 class="color-{{ day['status'] }}" text-center>{{ day['exchange'] }}</ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+      <div class="spacer" style="width:100%;height:18vh;"></div>
+
+</ion-content>

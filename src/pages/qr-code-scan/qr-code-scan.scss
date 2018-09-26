@@ -1,0 +1,92 @@
+page-qr-code-scan {
+
+
+  .nav-decor {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent !important;
+    pointer-events: none;
+  }
+
+
+  .bloco {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 23px;
+  }
+
+  button#btn-scan-pin {
+    margin: 0 auto;
+  }
+  ion-content {
+    background: transparent !important;
+  }
+
+  .content-md {
+    color: #BAAD74;
+    background-color: #3f51b500;
+  }
+
+  .content-ios {
+    color: #BAAD74;
+    background-color: #f8f7ef00;
+  }
+
+  ion-app.md {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 1.4rem;
+    background-color: #F8F7EF;
+    background-color: transparent;
+  }
+
+  ion-app.md {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 1.4rem;
+    background-color: transparent;
+  }
+
+  ion-app.ios {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 1.4rem;
+    background-color: transparent;
+  }
+
+
+
+  .transparentBody {
+    background: transparent !important;
+  }
+
+
+
+
+
+
+  //ion-content {
+  //  background: transparent !important;
+  //}
+  //ion-app.cameraView, ion-app.cameraView ion-content, ion-app.cameraView .nav-decor {
+  //  background: transparent none !important;
+  //}
+
+
+
+}
+
+//.nav-decor {
+//  left: 0;
+//  top: 0;
+//  position: absolute;
+//  z-index: 0;
+//  display: block;
+//  width: 100%;
+//  height: 100%;
+//  background: transparent !important;
+//  pointer-events: none;
+//}

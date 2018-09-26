@@ -1,0 +1,149 @@
+#page-transactions {
+
+  .vertical-align {
+    display: inline-grid;
+    align-content: center;
+    align-items: center;
+  }
+
+  .centralizer {
+    margin: 0 auto;
+    display: table;
+  }
+
+  #menu-card-in-account-header {
+
+    h3 {
+      color: $text-color;
+      margin-left: 15px;
+      font-size: 1.2em;
+
+      span {
+        font-size: 0.7em;
+      }
+
+    }
+
+  }
+
+  .content-header {
+    margin: 0;
+    background-color: color($colors, 'background-header');
+    color: $text-color;
+    max-height: 112px;
+
+    .username {
+      font-weight: bold;
+    }
+
+
+    .balance-info {
+      width: 100%;
+      text-align: right;
+
+      .increment {
+        display: block;
+        color: #2AC426;
+        font-size: 0.8em;
+      }
+      .balance {
+        display: block;
+        margin: 0;
+        font-weight: bold;
+        opacity: 0.8;
+
+        .dollar-sign {
+          font-size: 0.6em;
+        }
+      }
+    }
+
+  }
+
+  .select-itens {
+    max-width: 100%;
+    font-weight: 400;
+  }
+
+  #coin-selected {
+    position: absolute;
+    bottom: 25%;
+    width: 22px;
+    height: auto;
+  }
+
+  .select-md .select-icon {
+    width: 15px;
+    margin-left: 5px;
+
+    .select-icon-inner {
+      left: 0px;
+      border-top: 10px solid;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+      color: color($colors, 'primary');
+    }
+  }
+
+  ion-item.item {
+      background-color: initial;
+      color: $text-color;
+      padding-left: 10px;
+
+      .item-inner {
+        border: 0;
+      }
+  }
+
+  .datetime-text {
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      bottom: -14px;
+      pointer-events: none;
+      border-top: 10px solid;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+      color: color($colors, 'primary');
+      position: relative;
+      margin-left: 5px;
+    }
+  }
+
+  #days-container {
+    padding: 0 25px;
+
+    .day {
+      @extend .vertical-align;
+      color: $text-color;
+      opacity: 0.8;
+    }
+
+    .coin-name {
+      @extend .vertical-align;
+      color: color($colors, 'dark');
+      opacity: 0.4;
+    }
+
+    .row-day {
+      border-top: 1px solid color($colors, 'transaction-day-border');
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      &:last-child {
+        border-bottom: 1px solid color($colors, 'transaction-day-border');
+      }
+    }
+
+    .color-enviado, .color-transferido {
+      color: color($colors, 'transaction-send');
+    }
+
+    .color-recebido {
+      color: color($colors, 'transaction-receiver');
+    }
+
+  }
+
+}

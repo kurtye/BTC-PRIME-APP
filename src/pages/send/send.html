@@ -1,0 +1,75 @@
+<app-header></app-header>
+<ion-content padding id="page3" style="background: #F8F7EF !important;">
+
+    <ion-grid id="page-send">
+      <ion-row>
+        <ion-col col-4 class="info-title" text-left>
+          ENVIAR
+        </ion-col>
+        <ion-col col-8>
+          <img id="coin-selected" [src]="icons[coin]" />
+          <ion-item>
+            <ion-select class="select-itens" [(ngModel)]="coin" interface="action-sheet" cancelText="Cancelar" okText="OK">
+              <ion-option value="0" selected>BITCOIN</ion-option>
+              <ion-option value="1">ETHEREUM</ion-option>
+              <ion-option value="2">REAL</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-4 class="info-title" text-left>
+          DE
+        </ion-col>
+        <ion-col col-8 class="descriptions">
+          MINHA CARTEIRA
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-4 class="info-title" text-left>
+          PARA
+        </ion-col>
+        <ion-col col-8 class="descriptions">
+          SELECIONE OU DIGITE O END.
+        </ion-col>
+      </ion-row>
+
+      <ion-row id="divider-row">
+        <ion-col col-3 class="info-title-2" text-center>BTC</ion-col>
+        <ion-col col-3 class="" text-center>0,00</ion-col>
+        <ion-col col-3 class="info-title-2" text-center>BRL</ion-col>
+        <ion-col col-3 class="" text-center>0,00</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12 text-center class="descriptions">
+          ( total disponível ) - menos taxa 0,002336 BTC
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <ion-item>
+            <ion-select style="padding: 0 5px 0 0;" class="select-itens-body" interface="action-sheet" cancelText="Cancelar" okText="OK">
+              <ion-option value="0" selected>TAXA COMUM</ion-option>
+              <ion-option value="1">TAXA 2</ion-option>
+              <ion-option value="2">TAXA 3</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6 class="descriptions">
+           0,00002336 BTC ( R$ 0,36 )
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12 text-center>
+          <button ion-button round id="btn-send">enviar pagamento</button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+</ion-content>

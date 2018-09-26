@@ -1,0 +1,49 @@
+.base-sliders {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+
+.slider-1 {
+  @extend .base-sliders;
+  background-image: url('../../assets/img/how-register-pin/1.svg');
+}
+.slider-2 {
+  @extend .base-sliders;
+  background-image: url('../../assets/img/how-register-pin/2.svg');
+}
+.slider-3 {
+  @extend .base-sliders;
+  background-image: url('../../assets/img/how-register-pin/3.svg');
+  padding-top: 70vh;
+}
+
+.swiper-pagination-bullet {
+  width: 24px;
+  height: 24px;
+}
+
+.swiper-pagination-bullet {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    opacity: .6;
+    border: 1px solid gray !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: color($colors, 'primary');
+    opacity: 1;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal >
+.swiper-pagination-bullets {
+  bottom: 30px;
+}
+
+#btn-scan-pin {
+  text-transform: lowercase;
+}

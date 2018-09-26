@@ -1,0 +1,28 @@
+<app-header showMenu="true"></app-header>
+<ion-content padding id="page8" style="background: #F8F7EF !important;">
+
+  <ion-row class="row" id="divider-row"><p style="font-size: 18px;margin-bottom: 5px;">{{userInfo.usuario}}</p></ion-row>
+
+  <ion-row>
+    <p style="font-size: 18px;position: absolute;margin-top: 10px;">Nome</p>
+    <ion-col col-12 text-center><button class="disable-hover button button-ios button-default button-default-ios button-round button-round-ios" id="btn-send" ion-button="" ng-reflect-round="" round="" style="margin: 5px 0px 0px 0px;"><span class="button-inner"><span class="button-inner">EDITAR</span><div class="button-effect"></div></span><div class="button-effect"></div></button> </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <p style="font-size: 18px;position: absolute;margin-top: 10px;">Nº do PIN</p>
+    <ion-col col-12 text-center><button class="disable-hover button button-ios button-default button-default-ios button-round button-round-ios" id="btn-send" ion-button="" ng-reflect-round="" round="" style="margin: 5px 0px 0px 0px;"><span class="button-inner"><span class="button-inner">EDITAR</span><div class="button-effect"></div></span><div class="button-effect"></div></button> </ion-col>
+  </ion-row>
+
+  <p style="margin-top: 87px; font-size: 18px; text-align: center;">RECLAMAÇÃO/SUGESTÃO </p>
+
+  <ion-item>
+
+    <ion-textarea style="height: 100px;" [(ngModel)]="msg"></ion-textarea>
+  </ion-item>
+  <ion-row>
+
+    <ion-col col-12 text-center>
+      <button class="disable-hover button button-ios button-default button-default-ios button-round button-round-ios" id="btn-send" ion-button="" ng-reflect-round="" round="" style="margin: 5px 0px 0px 0px;"><span class="button-inner"><span class="button-inner">ENVIAR</span><div class="button-effect"></div></span><div class="button-effect"></div></button> </ion-col>
+  </ion-row>
+
+</ion-content>
