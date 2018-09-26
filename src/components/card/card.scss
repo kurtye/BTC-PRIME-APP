@@ -1,0 +1,57 @@
+
+.card {
+  margin: 40px 0px 49px;
+.button-inner{
+  text-transform: none;
+  font-weight: 300;
+  font-size: 13px;
+  padding-left: 17px;
+}
+  .mini-title {
+    opacity: 0.7;
+    font-size: 0.8em;
+    color: color($colors, 'dark');
+    text-transform: uppercase;
+  }
+
+  .value {
+    font-size: 23px;
+    opacity: 1;
+    color: #606060;
+    font-weight: 400;
+    margin-top: 0.4em;
+
+    span::before {
+      content: 'R$';
+      position: absolute;
+      background: #FFFFFF;
+      font-size: 0.7em;
+      width: 27px;
+      padding-top: 4px;
+      padding-bottom: 11px;
+      color:#939393;
+    }
+  }
+  .btn-see-chart::before{
+    content: '';
+    background-image: url(../../assets/img/icons/ethereum.png);
+    /* padding: 16px; */
+    position: absolute;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: left;
+    width: 24px;
+    height: 24px;
+ 
+  }
+  .btn-see-chart {
+    margin-top: 10px;
+    
+    .icon {
+      margin-right: 5px;
+    }
+  }
+
+}
+

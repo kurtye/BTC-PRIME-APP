@@ -1,0 +1,110 @@
+.group {
+  padding: 5px;
+
+  .grid {
+    padding: 21px 24px;
+  }
+  [col-2] {
+    width: 14.8%;
+    max-width: 14.8%;}
+  .content-dates{
+    margin:auto;
+    .day{
+      font-size:17px;
+    }
+    .month{
+      font-size: 10px;
+      text-transform:uppercase;
+    }
+    .year{
+      font-size: 8px;
+    }
+  }
+ 
+  h1 {
+    font-weight: 400;
+    color: $text-color;
+  }
+  h3 {
+    color: color($colors, 'dark');
+    opacity: 0.4;
+    font-weight: 600;
+  }
+  h2 {
+    color: #606060;
+    opacity: 1;
+    font-weight: 400;
+    font-size: 1.2em;
+
+    &::before {
+        content: 'R$';
+        position: absolute;
+        background: color($colors, 'background-card');
+        font-size: 0.8em;
+        width: 18px;
+        padding-top: 3px;
+        color: #5858589e;
+      }
+  }
+  h5 {
+    font-size: 0.8em;
+    color: $text-color;
+  }
+
+  .columns {
+    margin-top: 37px;
+
+    .column {
+      height: 140px;
+      background: #EDEBE2;
+      background-image: url('../../assets/img/group-column-bg.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position-y: 0px;
+      background-position-x: center;
+      color: color($colors, 'background');
+      border-radius: 5px;
+      vertical-align: middle;
+      border: 2px solid color($colors, 'background-card');
+      font-weight: 400;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      margin-bottom: 67px;
+      position: relative;
+      margin-right: 5px;
+      .month {
+        border-bottom: 2px solid;
+        display: block;
+        padding-bottom: 4px;
+      }
+
+      .row-num {
+        position: absolute;
+        bottom: -37px;
+        font-size: 15px;
+        color: #D3C9A1;
+        width: 28px;
+        left: 9px;
+      }
+
+    }
+
+  }
+
+  .powered-row {
+    margin-top: 11px;
+
+    .powered-by {
+      color: #E4E1D5;
+    }
+  }
+  .buttom-row {
+    margin-bottom: 0px;
+
+    .buttom-datail {
+      padding: 20px 36px;
+    }
+  }
+
+}

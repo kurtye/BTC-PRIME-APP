@@ -1,0 +1,61 @@
+app-header {
+
+  $app-header-height: 10vh;
+
+  &+ * {
+      margin-top: $app-header-height;
+  }
+
+  #app-narbar {
+      min-height: $app-header-height;
+      height: $app-header-height;
+  }
+  .toolbar-md, .toolbar-ios{
+    padding: 0px 4px;
+  }
+  .toolbar-md-header .toolbar-background-md, .toolbar-ios-header .toolbar-background-ios{
+    background-image: url('../../assets/img/fundohead.png');
+    background-size: 100% 100%;
+    border: 0px;
+    background-repeat: no-repeat;
+  }
+  .toolbar-md-header .bar-button-default-md{
+    margin-top: 28px;
+  }
+ //.base-header {
+ //  width: 65%;
+ //  display: block;
+ // }
+  .toolbar-content-md,   .toolbar-content-ios{
+    text-align:center;
+    height: 100%;
+  }
+  .with-logo {
+    height: 100%;
+    margin-left: -40px;
+    margin-top: 17px;
+
+  }
+
+  .without-logo {
+    margin: 0 auto;
+    margin-top: 10px;
+ }
+
+  button.disable-hover.bar-buttons.bar-buttons-ios.bar-button.bar-button-ios.bar-button-default.bar-button-default-ios.bar-button-menutoggle.bar-button-menutoggle-ios {
+    margin-top: 30px;
+  }
+
+  .back-button {
+    &+ .toolbar-content {
+      //.with-logo {
+      //  margin-left: 20%;
+      //}
+      //.without-logo {
+      //  margin-left: 20%;
+      //}
+    }
+  }
+
+
+}

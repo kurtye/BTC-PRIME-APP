@@ -1,0 +1,17 @@
+<ion-card class="card">
+  <ion-list>
+    <ion-item text-center>
+      <div>
+        <span class="mini-title">
+          {{ title }}
+        </span>
+        <h1 class="value" text-center>
+          <span>{{ (value | currency:'BRL').replace('R$ ', '') }}</span>
+        </h1>
+        <button ion-button clear class="btn-see-chart" (click)="handleClieckedEvent($event)">
+          <ion-icon name="{{ iconName }}" class="icon"></ion-icon> {{ buttonLabel }}
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-card>

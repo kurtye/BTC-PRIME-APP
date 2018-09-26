@@ -1,0 +1,36 @@
+<ion-card class="group">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-5>
+        <h1>GRUPO</h1>
+        <h5>ID {{ groupId }}</h5>
+      </ion-col>
+      <ion-col col-7 text-right>
+        <h3>TOTAL À RECEBER</h3>
+        <h2>{{ value | currency:'BRL' }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row class="columns" center>
+    <ng-container *ngFor="let date of getDates()">
+      <ion-col *ngIf="date?.day" col-2 class="column" [style.background-position-y.px]="(date?.percent || 0) + ((date?.percent || 0) * 0.2)">
+          <div text-center class="content-dates">
+            <span class="day">{{ date?.day }}</span>
+            <span class="month">{{ date?.month }}</span>
+            <span class="year">{{ date?.yaer }}</span>
+           <span class="row-num">{{ date?.position }}</span>
+          </div>
+        </ion-col>
+    </ng-container>
+    </ion-row>
+    <ion-row class="powered-row">
+        <ion-col *ngIf="by" col-12 text-center>
+          <span class="powered-by">POWERED BY</span> {{ by }}
+        </ion-col>
+      </ion-row>
+      <ion-row class="buttom-row">
+        <ion-col col-12 text-center>
+          <button [disabled]="btnDisabled" class="buttom-group" ion-button color="primary"><p style="text-transform: none;font-size: 16px; padding-right: 17px; color: #fff; font-weight: 400;">DETALHES</p></button>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>

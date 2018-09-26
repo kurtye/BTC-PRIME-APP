@@ -1,0 +1,40 @@
+<div style="display: block" id="pie-chart-warraper">
+
+  <span id="current-balance">
+    <span class="dollar-sign">R$</span>
+    <span class="balance">45.231,</span>
+    <span class="centes">44</span>
+  </span>
+
+  <canvas baseChart
+    height="280px"
+    [data]="doughnutChartData"
+    [labels]="doughnutChartLabels"
+    [colors]="doughnutChartColors"
+    [chartType]="doughnutChartType"
+    [options]="doughnutChartOptions"
+    (chartHover)="chartHovered($event)"
+    (chartClick)="chartClicked($event)">
+  </canvas>
+
+  <ion-grid>
+    <ion-row class="coins">
+      <ion-col class="coin btc">
+        <span class="title">Bitcoin</span>
+        <span class="desc-line">R$ 12.000,00</span>
+        <span class="desc-line">0.478023 BTC</span>
+      </ion-col>
+      <ion-col class="coin eth">
+        <span class="title">Ether</span>
+        <span class="desc-line">R$ 4.000,00</span>
+        <span class="desc-line">0.478023 BTC</span>
+      </ion-col>
+      <ion-col class="coin rs">
+        <span class="title">Reais</span>
+        <span class="desc-line">R$ 2.000,00</span>
+        <span class="desc-line">0.478023 BTC</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</div>

@@ -1,0 +1,9 @@
+<ion-header type="overlay">
+  <ion-navbar color="header" id="app-narbar" type="overlay">
+    <button *ngIf="getShowMenu()" ion-button menuToggle  type="overlay">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img [ngClass]="{ 'with-logo': (getShowMenu() == true), 'without-logo': (getShowMenu() == false) }"
+         src="../../assets/img/logo_app.png">
+  </ion-navbar>
+</ion-header>

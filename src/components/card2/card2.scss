@@ -1,0 +1,71 @@
+.card2 {
+  .button[icon-only] {
+    padding: 0;
+    width: 50px;
+  }
+
+  .button-inner {
+    text-transform: none;
+    font-weight: 300;
+    font-size: 12px;
+    padding-left: 19px;
+    padding-right: 27px;
+    }
+  .info-row {
+
+
+    .vertical-align {
+      display: inline-grid;
+      align-content: center;
+      align-items: center;
+    }
+
+    .info {
+      @extend .vertical-align;
+      color: color($colors, 'dark');
+      opacity: 0.6;
+
+      .title {
+        @extend .vertical-align;
+        display: block;
+        color:#606060;
+        font-size: 0.9em;
+      }
+
+      .subtitle {
+        @extend .vertical-align;
+        display: block;
+        font-size: 0.7em;
+        
+      }
+    }
+
+    .value {
+      @extend .vertical-align;
+      padding: 20px 0;
+      border-left: 1px solid color($colors, 'secondary');
+      h1{
+        color: #696969;
+        font-size: 0.999999em;
+        padding-left: 18px
+      }
+      h1::before {
+        content: 'R$';
+        position: absolute;
+        background: #FFFFFF;
+        font-size: 0.7em;
+        width: 28px;
+        padding-top: 4px;
+        color: #696969;
+      }
+    }
+
+    .icon {
+      font-size: 2.8em;
+    }
+
+  }
+
+}
+
+

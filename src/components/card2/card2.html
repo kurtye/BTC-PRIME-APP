@@ -1,0 +1,22 @@
+<ion-card class="card2">
+  <ion-list>
+    <ion-item>
+      <ion-grid>
+        <ion-row class="info-row">
+          <ion-col col-5 class="info" text-left>
+            <h3 class="title">AUMENTAR</h3>
+            <h4 class="subtitle">THS/S DA MINERAÇÃO</h4>
+          </ion-col>
+          <ion-col class="value" col-5 text-center>
+            <h1>{{ value | currency:'BRL' }}</h1>
+          </ion-col>
+          <ion-col col-2 class="vertical-align" text-right>
+            <button ion-button icon-only clear>
+              <ion-icon name="add-circle"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-card>

@@ -1,0 +1,147 @@
+<ion-menu [content]="mainContent" (ionClose)="closed($event)">
+  <app-header showMenu="true"></app-header>
+
+  <ion-content id="menu-content">
+    <div id="menu-container2" class="container-account-menu">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="username" col-12 text-right>
+            <h3>RODRIGO</h3>
+          </ion-col>
+          <ion-col class="account-number" col-12 text-right>
+            <h5>
+              Conta nº 23E9-5
+            </h5>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <ion-list id="menu-list1" class="app-sidebar-left">
+
+      <ion-item [style.font-weight]="(submenu_active == 'wallet') ? 'bold' : 'normal'" no-lines class="menu-item" id="menu-list-item5" (click)="showSubMenu('wallet')">
+        <ion-icon item-left>
+          <img class="custom-icon" src="../assets/img/icons/wallet.svg" />
+        </ion-icon>
+        minhas carteiras
+      </ion-item>
+      <div *ngIf="submenu_active == 'wallet'">
+        <ion-item no-lines menuClose="" class="menu-item-sub" (click)="goToSend()">
+          <ion-icon item-left></ion-icon>
+          enviar
+        </ion-item>
+        <ion-item no-lines menuClose="" class="menu-item-sub" (click)="goToReceiver()">
+          <ion-icon item-left></ion-icon>
+          receber
+        </ion-item>
+      </div>
+
+
+      <!--<ion-item [style.font-weight]="(submenu_active == 'exchange') ? 'bold' : 'normal'" no-lines class="menu-item" id="menu-list-item4" (click)="showSubMenu('exchange')">
+        <ion-icon item-left>
+          <img class="custom-icon" src="../assets/img/icons/bitcoin.svg" />
+        </ion-icon>
+        exchange
+      </ion-item>
+      <ion-grid class="submenu" *ngIf="submenu_active == 'exchange'">
+        <ion-row>
+          <ion-col col-12>
+            <button ion-button clear menuClose="" on-click="goToBuy()">
+              <ion-icon>
+                comprar
+              </ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-12>
+            <button ion-button clear menuClose="" on-click="goToSell()">
+              <ion-icon>
+                vender
+              </ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-12>
+            <button ion-button clear menuClose="" on-click="goToOffers()">
+              <ion-icon>
+                ofertas
+              </ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>-->
+
+      <ion-item no-lines class="menu-item" menuClose="" on-click="goToMining()" id="menu-list-item2">
+        <ion-icon item-left>
+          <img class="custom-icon" src="../assets/img/icons/mining.svg" />
+        </ion-icon>
+        mineração
+      </ion-item>
+
+
+      <ion-item [style.font-weight]="(submenu_active == 'config') ? 'bold' : 'normal'" no-lines class="menu-item" id="menu-list-item4" (click)="showSubMenu('config')">
+        <ion-icon item-left>
+          <img class="custom-icon" src="../assets/img/icons/config.svg" />
+        </ion-icon>
+        configuração
+      </ion-item>
+      <div *ngIf="submenu_active == 'config'" style="padding-left: 0;margin-left: 0;">
+        <div class="dollar-sign-container">
+          <ion-item no-lines menuClose="" class="menu-item" (click)="goToIncreaseProcessing()">
+            <ion-icon item-left class="doller-sign-icon">
+              <img class="custom-icon" src="../assets/img/icons/dollar-sign.svg" />
+            </ion-icon>
+            aumentar processamento
+          </ion-item>
+        </div>
+        <ion-item no-lines menuClose="" class="menu-item-sub" (click)="goToAccountSecurity()">
+          <ion-icon item-left></ion-icon>
+          minha conta
+        </ion-item>
+        <ion-item no-lines menuClose="" class="menu-item-sub" (click)="goToStyle()">
+          <ion-icon item-left></ion-icon>
+          estilo
+        </ion-item>
+      </div>
+
+
+
+
+
+      <ion-item no-lines class="menu-item">
+        <ion-icon item-left>
+          <img class="custom-icon" src="../assets/img/icons/unlock.svg" />
+        </ion-icon>
+        sair da sua conta
+      </ion-item>
+
+    </ion-list>
+
+    <ion-card id="menu-card-account">
+      <ion-grid>
+        <ion-row>
+          <ion-col text-center col-12>
+            <h4>SALDO EM USO</h4>
+          </ion-col>
+          <ion-col text-center col-12>
+            <h1>R$ 1.119,00</h1>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+  </ion-content>
+  <ion-card id="menu-card-in-account" color="dark">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <h3>
+            <span>disponivel</span><br>
+            saldo R$ 45.432,32
+          </h3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+</ion-menu>
+
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>

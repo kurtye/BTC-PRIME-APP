@@ -1,0 +1,79 @@
+$color_btc: #D3C9A1;
+$color_eth:  #606060;
+$color_rs: #4F4A33;
+
+doughnut-chart {
+.chartjs-render-monitor{
+  max-width: 75% !important;
+  height: 75% !important;
+  margin: auto;
+
+}
+  #pie-chart-warraper {
+
+    background-color: color($colors, 'background-card');
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 3px 3px 5px -3px #808080db;
+
+    #current-balance {
+      // opacity: 0;
+      font-size: 1.7em;
+      font-weight: 200;
+      position: absolute;
+      margin: 27% auto 0 auto;
+      text-align: center;
+      width: 92%;
+
+      .dollar-sign {
+        font-size: 0.6em;
+      }
+      .centes {
+        font-size: 0.6em;
+        top: -6px;
+        left: -7px;
+        position: relative;
+      }
+    }
+
+    .coins {
+      margin-top: 10px;
+
+      .coin {
+        padding: 5px 0 0 0;
+        margin: 5px;
+        border-top: 4px solid;
+        color: color($colors, 'dark');
+
+        .title {
+          opacity: 0.5;
+          display: block;
+          font-weight: 800;
+          margin-bottom: 2px;
+          font-size: 0.9em;
+        }
+        .desc-line {
+          opacity: 0.5;
+          display: block;
+          font-size: 0.8em;
+          margin: 3px auto;
+          font-weight:bold;
+        }
+
+        &.btc {
+          border-top-color: $color_btc;
+        }
+        &.eth {
+          border-top-color: $color_eth;
+        }
+        &.rs {
+          border-top-color: $color_rs;
+        }
+
+      }
+
+    }
+
+  }
+
+}

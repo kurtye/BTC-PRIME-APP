@@ -1,0 +1,201 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+
+
+  #menu-content {
+    background-color: color($colors, 'background-menu');
+    height: 90%;
+      .label-md, .label-ios{
+        font-weight: 200
+      }
+   h1, h2, h3,h5{
+    font-weight: 200 !important;
+  }
+} 
+
+  .container-account-menu {
+    padding: 25px 20px 20px 20px;
+    background-color: color($colors, 'background-menu');
+
+    .icon {
+      font-family: Roboto;
+    }
+
+    .reset-spaces {
+      padding: 0;
+      margin: 0;
+    }
+
+    .username {
+      @extend .reset-spaces;
+
+      h3 {
+        @extend .reset-spaces;
+        color: color($colors, 'primary');
+      }
+
+    }
+
+    .account-number {
+      @extend .reset-spaces;
+
+      h5 {
+        margin-bottom: 8px;
+        @extend .reset-spaces;
+      }
+    }
+
+  }
+
+  .app-sidebar-left {
+
+
+    .item-inner {
+      border: 0;
+
+    }
+
+
+
+
+    .list-ios .item[no-lines], .list-ios .item[no-lines] .item-inner {
+      border-width: 0;
+      margin: 14px;
+    }
+
+    .menu-item {
+      background-image: url('../assets/img/bg-item-menu.png');
+      background-repeat: no-repeat;
+      background-color: color($colors, 'background-menu');
+      background-position: bottom;
+      background-size: 90%;
+      color: color($colors, 'primary');
+
+      &:last-of-type {
+        background: none;
+      }
+
+    }
+
+    .menu-item-sub {
+      @extend .menu-item;
+      background: none;
+
+      &:last-child {
+        background-image: url(../assets/img/bg-item-menu.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 90%;
+      }
+    }
+
+    .menu-item-config {
+      @extend .menu-item;
+      padding-left: 0;
+    }
+
+    .custom-icon {
+        height: 2.6rem;
+    }
+
+  }
+
+  #menu-card-account {
+
+    margin: 20px;
+    padding: 10px;
+    color: color($colors, 'dark');
+    opacity: 0.6;
+
+    h1::before {
+        content: 'RS';
+        position: absolute;
+        background: color($colors, 'background-card');
+        font-size: 0.8em;
+        width: 35px;
+        padding-top: 5px;
+    }
+
+  }
+
+  #menu-card-in-account {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    z-index: 9;
+    background-image: url('../../assets/img/fundohead.png');
+    background-size:100% 100%;
+    h3 {
+      color: #BAAD74;
+      margin: 0 auto;
+      display: table;
+      font-size: 1.5em;
+      padding: 16px 0px;
+      font-weight: 200;
+
+      span {
+        font-size: 0.7em;
+      }
+    }
+  }
+
+  .submenu {
+      background-image: url('../assets/img/bg-item-menu.png');
+      background-repeat: no-repeat;
+      background-color: color($colors, 'background-menu');
+      background-position: bottom;
+      background-size: 90%;
+      padding-left: 60px;
+
+      * {
+        font-weight: normal;
+      }
+  }
+
+  #item-dollar-sign .item-inner {
+    margin-left: 5px !important;
+  }
+
+ .dollar-sign-container {
+  background-image: url('../assets/img/icons/bg-dollar-sign.svg');
+  background-repeat: no-repeat;
+  background-position: -150px 0px;
+ }
+
+
+.card2 .info-row .info .subtitle {
+  display: block;
+  font-size: 0.6em;
+}
+
+
+
+#menu-card-in-account h3 {
+  color: #BAAD74;
+  margin: 0 auto;
+  display: table;
+  padding: 8px 0px 27px;
+  font-weight: 400;
+  font-size: 20px;
+  height: 82px;
+}
+
+.label.label-ios:active {
+  font-weight: bold;
+}

@@ -1,0 +1,166 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+$header_height: 69px;
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+// Shared Variables
+$background-color: transparent;
+ion-app.cameraView, ion-app.cameraView ion-content, ion-app.cameraView .nav-decor {
+  background: transparent url("../assets/img/camera_overlay.png") !important;
+  background-size: 100% 100% !important;
+}
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+$content-ios-transition-background: transparent;
+
+$text-color: #BAAD74;
+$color-reset-pin: #A3A3A3;
+
+$colors: (
+  primary:    #BBAB73,
+  secondary:  #D4CCA4,
+  danger:     #f53d3d,
+  light:      #F2F2EC,
+  dark:       #101010,
+  header: #101010,
+  background: #F8F7EF,
+  background-card: #FFFFFF,
+  background-menu: #F8F7EF,
+  background-header: #4D4D4D,
+  text-color: $text-color,
+
+  background-tabs: #BAAD74,
+  color-tabs: #ffffff,
+  color-tab-ative: #606060,
+
+  transaction-send: #7CACBE,
+  transaction-receiver: #BE7C7C,
+  transaction-transferred: #7CACBE,
+  transaction-day-border: #F5EFD4
+
+);
+
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$toolbar-ios-height: $header_height;
+
+$item-ios-paragraph-text-color: $text-color;
+
+$label-ios-text-color: $text-color;
+
+$card-ios-margin-start: 0;
+$card-ios-margin-left: 0;
+$card-ios-margin-end: 0;
+$card-ios-margin-right: 0;
+$card-ios-margin-top: 25px;
+$card-ios-margin-botton: 25px;
+$card-ios-padding-top: 30px;
+$card-ios-padding-bottom: 30px;
+$card-ios-background-color: color($colors, 'background-card');
+
+$tabs-ios-tab-text-color:color($colors, 'color-tabs');
+$tabs-ios-tab-icon-color: $tabs-ios-tab-text-color;
+$tabs-ios-tab-text-color-active: color($colors, 'color-tab-ative');
+$tabs-ios-tab-icon-color-active: $tabs-ios-tab-text-color-active;
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+$toolbar-md-height: $header_height;
+
+$item-md-paragraph-text-color: $text-color;
+
+$label-md-text-color: $text-color;
+
+$card-md-margin-start: 0;
+$card-md-margin-left: 0;
+$card-md-margin-end: 0;
+$card-md-margin-right: 0;
+$card-md-margin-top: 25px;
+$card-md-margin-botton: 25px;
+$card-md-padding-top: 30px;
+$card-md-padding-bottom: 30px;
+$card-md-background-color: color($colors, 'background-card');
+
+$tabs-md-tab-text-color:color($colors, 'color-tabs');
+$tabs-md-tab-icon-color: $tabs-md-tab-text-color;
+$tabs-md-tab-text-color-active: color($colors, 'color-tab-ative');
+$tabs-md-tab-icon-color-active: $tabs-md-tab-text-color-active;
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+$background-color: color($colors, 'background');
+$tabs-background:  color($colors, 'background-tabs');
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../theme/fonts/lato/Lato-Regular.ttf');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
