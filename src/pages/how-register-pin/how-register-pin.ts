@@ -36,24 +36,7 @@ export class HowRegisterPinPage {
 
     localStorage.setItem('fisrtAcces', 'true');
 
-
-
-      // let pinModal = this.modalCtrl.create(QrCodeScanPage);
-      //               pinModal.present();
-      //
-      //               pinModal.onDidDismiss(data => {
-      //                 this.viewCtrl.dismiss();
-      //                 console.log(data);
-      //               });
-
-
     this.navCtrl.push(QrCodeScanPage)
-
-    // let currentIndex = this.navCtrl.getActive().index;
-    // this.navCtrl.push(QrCodeScanPage).then(() => {
-    // this.navCtrl.remove(currentIndex, -1 );
-    // });
-
 
   }
 }

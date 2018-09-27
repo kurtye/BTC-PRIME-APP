@@ -1,4 +1,4 @@
-<ion-menu [content]="mainContent" (ionClose)="closed($event)">
+<ion-menu [content]="mainContent" (ionClose)="closed($event)" >
   <app-header showMenu="true"></app-header>
 
   <ion-content id="menu-content">
@@ -6,11 +6,11 @@
       <ion-grid>
         <ion-row>
           <ion-col class="username" col-12 text-right>
-            <h3>RODRIGO</h3>
+            <h3>{{usuarioNome}}</h3>
           </ion-col>
           <ion-col class="account-number" col-12 text-right>
             <h5>
-              Conta nº 23E9-5
+              Conta nº {{usuarioId}}
             </h5>
           </ion-col>
         </ion-row>
@@ -121,7 +121,7 @@
             <h4>SALDO EM USO</h4>
           </ion-col>
           <ion-col text-center col-12>
-            <h1>R$ 1.119,00</h1>
+            <h1>R$ {{usuarioSaldoL}}</h1>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -134,7 +134,7 @@
         <ion-col col-12>
           <h3>
             <span>disponivel</span><br>
-            saldo R$ 45.432,32
+            saldo R$ {{usuarioSaldoV}}
           </h3>
         </ion-col>
       </ion-row>

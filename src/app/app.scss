@@ -16,7 +16,9 @@
 // automatically applied to the <body> element in the app.
 
 
-
+ion-content#menu-content {
+  background: none !important;
+}
 
   #menu-content {
     background-color: color($colors, 'background-menu');
