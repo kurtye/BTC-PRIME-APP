@@ -13,13 +13,13 @@
   <ion-grid class="content-header" >
     <ion-row>
       <ion-col col-4>
-        <ion-label class="username">{{userName}}</ion-label>
+        <ion-label class="username">{{nome}}</ion-label>
       </ion-col>
       <ion-col col-4>
         <div class="balance-info">
           <span class="increment">+5,00%</span>
           <label class="balance">
-            <span class="dollar-sign">R$</span> 26.476,00</label>
+            <span class="dollar-sign">R$</span> {{(cotacaoInfo).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</label>
         </div>
       </ion-col>
       <ion-col col-4 align-self-end>
@@ -40,10 +40,10 @@
       SALDOS
     </h3>
     <doughnut-chart></doughnut-chart>
-
+    <!--{{ (cotacaoInfo).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}-->
     <card
       title="PREÇO DO BITCOIN"
-      value="24519.44"
+      value= "{{(cotacaoInfo).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}"
       buttonLabel="Ver gráficos"
       (onTap)="onTopCard($event)"
     >
@@ -51,7 +51,7 @@
 
     <card
       title="PREÇO DO ETHEREUM"
-      value="1719.19"
+      value="0.0000"
       buttonLabel="Ver gráficos"
       (onTap)="onTopCard"
     >

@@ -11,8 +11,8 @@
         <ion-item>
           <ion-select class="select-itens" [(ngModel)]="coin" interface="action-sheet" cancelText="Cancelar" okText="OK">
             <ion-option value="0" selected>BITCOIN</ion-option>
-            <ion-option value="1">ETHEREUM</ion-option>
-            <ion-option value="2">REAL</ion-option>
+            <!--<ion-option value="1">ETHEREUM</ion-option>-->
+            <!--<ion-option value="2">REAL</ion-option>-->
           </ion-select>
         </ion-item>
       </ion-col>
@@ -21,44 +21,48 @@
     <ion-row>
       <ion-col col-1></ion-col>
       <ion-col col-10 class="descriptions" text-center>
-         TOQUE PARA CPIAR O ENDEREÇO COMPARTILHE POR EMAIL / MENSAGEM
+         TOQUE PARA COPIAR O ENDEREÇO COMPARTILHE POR EMAIL / MENSAGEM
       </ion-col>
     </ion-row>
 
+
     <ion-row id="qr-code-container">
       <ion-col col-12 text-center>
-         <img src="../../assets/img/qr-code.png" />
+        <ion-card *ngIf="createdCode" >
+          <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+
+        </ion-card>
       </ion-col>
     </ion-row>
 
     <ion-row id="divider-row">
       <ion-col col-12 class="descriptions" text-center>
-        1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX
+        <p>{{ createdCode }}</p>
       </ion-col>
-      <ion-col col-3 class="info-title-2" text-center>BTC</ion-col>
-      <ion-col col-3 class="info-number" text-center>0,00</ion-col>
-      <ion-col col-3 class="info-title-2" text-center>BRL</ion-col>
-      <ion-col col-3 class="info-number" text-center>0,00</ion-col>
+      <!--<ion-col col-3 class="info-title-2" text-center>BTC</ion-col>-->
+      <!--<ion-col col-3 class="info-number" text-center>0,00</ion-col>-->
+      <!--<ion-col col-3 class="info-title-2" text-center>BRL</ion-col>-->
+      <!--<ion-col col-3 class="info-number" text-center>0,00</ion-col>-->
     </ion-row>
 
-    <ion-row>
-      <ion-col col-12 text-center class="descriptions">
-        ( total disponível ) - menos taxa 0,002336 BTC
-      </ion-col>
-    </ion-row>
+    <!--<ion-row>-->
+      <!--<ion-col col-12 text-center class="descriptions">-->
+        <!--( total disponível ) - menos taxa 0,002336 BTC-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
 
-    <ion-row>
-      <ion-col col-4 class="info-title" text-left>
-        PARA
-      </ion-col>
-      <ion-col col-8 class="descriptions">
-         MINHA CARTEIRA
-      </ion-col>
-    </ion-row>
+    <!--<ion-row>-->
+      <!--<ion-col col-4 class="info-title" text-left>-->
+        <!--PARA-->
+      <!--</ion-col>-->
+      <!--<ion-col col-8 class="descriptions">-->
+         <!--MINHA CARTEIRA-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
 
     <ion-row>
       <ion-col col-12 text-center>
-        <button ion-button round id="btn-receiver">solicitar pagamento</button>
+        <button ion-button round id="btn-receiver" (click)="copiar()">Copiar Informações</button>
       </ion-col>
     </ion-row>
 
@@ -67,3 +71,17 @@
   <div class="spacer" style="width:100%;height:85px;"></div>
 
 </ion-content>
+
+
+
+<!--<ion-content padding>-->
+
+
+  <!--<ion-card *ngIf="createdCode" >-->
+    <!--<ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>-->
+    <!--<ion-card-content>-->
+      <!--<p>Value: {{ createdCode }}</p>-->
+    <!--</ion-card-content>-->
+  <!--</ion-card>-->
+
+<!--</ion-content>-->

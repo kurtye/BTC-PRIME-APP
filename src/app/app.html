@@ -1,4 +1,4 @@
-<ion-menu [content]="mainContent" (ionClose)="closed($event)" >
+<ion-menu [content]="mainContent" (ionClose)="closed($event)"w >
   <app-header showMenu="true"></app-header>
 
   <ion-content id="menu-content">
@@ -105,7 +105,7 @@
 
 
 
-      <ion-item no-lines class="menu-item">
+      <ion-item no-lines class="menu-item" menuClose="" (click)="goToPin()">
         <ion-icon item-left>
           <img class="custom-icon" src="../assets/img/icons/unlock.svg" />
         </ion-icon>
@@ -121,7 +121,7 @@
             <h4>SALDO EM USO</h4>
           </ion-col>
           <ion-col text-center col-12>
-            <h1>R$ {{usuarioSaldoL}}</h1>
+           <h1>R$  {{usuarioSaldoL}}</h1>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -134,7 +134,7 @@
         <ion-col col-12>
           <h3>
             <span>disponivel</span><br>
-            saldo R$ {{usuarioSaldoV}}
+            saldo R$  {{usuarioSaldoV}}
           </h3>
         </ion-col>
       </ion-row>

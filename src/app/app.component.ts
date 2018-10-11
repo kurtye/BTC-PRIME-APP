@@ -65,6 +65,8 @@ export class MyApp {
         events: Events,
     ) {
 
+
+
         events.subscribe('UpdateMenu', (nome, id, saldoL, saldoV) => {
 
 
@@ -107,6 +109,9 @@ export class MyApp {
 
     }
 
+    exitApp(){
+        this.navCtrl.setRoot(PinPage);
+    }
 
     closed(e) {
         this.submenu_active = "";

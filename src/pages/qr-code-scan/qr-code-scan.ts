@@ -53,6 +53,10 @@ export class QrCodeScanPage {
                     // start scanning
                     let scanSub = this.qrScanner.scan().subscribe((text: string) => {
 
+
+
+
+
                         this.qrScanner.hide(); // hide camera preview
                         scanSub.unsubscribe(); // stop scanning
                         this.hideCamera();
@@ -81,9 +85,10 @@ export class QrCodeScanPage {
             }).catch((e: any) => {
 
             //ATIVA PARA TESTE NA WEB
-            //this.navCtrl.setRoot(PinPage);
+            this.navCtrl.setRoot(PinPage);
             //localStorage.setItem('qrcode', 'bWF4bXVuaG96'); //MAX
-            //localStorage.setItem('qrcode', 'Y29tZRh'); //COMETA
+            localStorage.setItem('qrcode', 'Y29tZXRh'); //COMETA
+            //localStorage.setItem('qrcode', 'trrrrrar'); //COMETA
             console.log('Error is', e)
         });
 

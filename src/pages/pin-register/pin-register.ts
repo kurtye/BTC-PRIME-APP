@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams, ModalController, ViewController, AlertController} from 'ionic-angular';
 
 import {PinPage} from "../pin/pin";
-
-
+import {RestProvider} from "../../providers/rest/rest";
+import {HowRegisterForgetPage} from "../how-register-forget/how-register-forget";
 
 @IonicPage()
 @Component({
@@ -23,13 +23,61 @@ export class PinRegisterPage {
     pin1: any = [];
     pin2: any = [];
 
+    data: any[];
+    validacao: any;
+    pareamento:any;
+    user: any = {};
+    userInfo: any = {};
     constructor(public navCtrl: NavController, public navParams: NavParams,
                 public modalCtrl: ModalController, public viewCtrl: ViewController,
-                public alertCtrl: AlertController) {
+                public alertCtrl: AlertController, public restProvider: RestProvider) {
 
     }
 
     ionViewDidLoad() {
+
+
+        this.validacao = localStorage.getItem('qrcode');
+
+        this.restProvider.login().subscribe(data => {
+            this.user = data;
+
+            console.log(this.user)
+
+
+        }, onerror => {
+            if(onerror.status === 403) {
+           console.log('Error menssage , DEU CERTO'  + onerror)
+                let alert = this.alertCtrl.create({
+                    title: 'ERRO na Leitura do QR CODE',
+                    subTitle: 'Usuário Não encontrado',
+                    buttons: [
+                        {text: 'Ok',
+                            handler: () => {
+                                localStorage.clear();
+                                this.navCtrl.push(HowRegisterForgetPage);
+                            }
+                        },
+                    ],
+
+
+                });
+                alert.present();
+            }
+        });
+
+        if (this.validacao == ''){
+
+            let alert = this.alertCtrl.create({
+                title: 'ERRO',
+                subTitle: 'Usuário Não encontrado',
+                buttons: ['Fechar']
+
+            });
+            alert.present();
+
+        }
+
 
 
     }

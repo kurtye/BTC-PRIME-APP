@@ -5,8 +5,7 @@ import {
 } from 'ionic-angular';
 
 import {TabsControllerPage} from '../tabs-controller/tabs-controller';
-import {HomePage} from "../home/home";
-import {HowRegisterPinPage} from "../how-register-pin/how-register-pin";
+import {HowRegisterForgetPage} from "../how-register-forget/how-register-forget";
 import {PinRegisterPage} from "../pin-register/pin-register";
 
 @IonicPage()
@@ -35,7 +34,7 @@ export class PinPage {
 
         if (fisrtAcces == 'true') {
             let loading = this.loadingCtrl.create({
-                spinner: 'hide',
+                spinner: 'ios',
                 content: 'Carregando...'
             });
 
@@ -99,8 +98,8 @@ export class PinPage {
                 if (pin1 == check) {
 
                     let loading = this.loadingCtrl.create({
-                        spinner: 'hide',
-                        content: 'Carregando...'
+                        spinner: 'ios',
+                        content: 'Logando...'
                     });
 
                     loading.present();
@@ -143,7 +142,7 @@ export class PinPage {
 
 
     esqueciPin() {
-        this.navCtrl.push(HowRegisterPinPage);
+        this.navCtrl.push(HowRegisterForgetPage);
         localStorage.clear();
     }
 

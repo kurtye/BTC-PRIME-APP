@@ -1,14 +1,14 @@
-<div style="display: block" id="pie-chart-warraper">
+<div style="display: block" id="pie-chart-warraper"  >
 
   <span id="current-balance">
-    <span class="dollar-sign">R$</span>
-    <span class="balance">45.231,</span>
-    <span class="centes">44</span>
+    <span class="balance">{{ (+total).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) }}</span>
+    <!--<span class="centes">44</span>-->
   </span>
 
+    <div>
   <canvas baseChart
     height="280px"
-    [data]="doughnutChartData"
+    [data]="[this.saldoBTC, this.usuarioSaldoV ]"
     [labels]="doughnutChartLabels"
     [colors]="doughnutChartColors"
     [chartType]="doughnutChartType"
@@ -16,23 +16,25 @@
     (chartHover)="chartHovered($event)"
     (chartClick)="chartClicked($event)">
   </canvas>
+    </div>
 
   <ion-grid>
     <ion-row class="coins">
       <ion-col class="coin btc">
         <span class="title">Bitcoin</span>
-        <span class="desc-line">R$ 12.000,00</span>
-        <span class="desc-line">0.478023 BTC</span>
+        <span class="desc-line">{{ (saldoBTC * cotacaoInfo).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) }}</span>
+        <span class="desc-line">{{saldoBTC}} BTC</span>
       </ion-col>
-      <ion-col class="coin eth">
-        <span class="title">Ether</span>
-        <span class="desc-line">R$ 4.000,00</span>
-        <span class="desc-line">0.478023 BTC</span>
-      </ion-col>
+      <!--<ion-col class="coin eth">-->
+        <!--<span class="title">Ether</span>-->
+        <!--<span class="desc-line">R$ 4.000,00</span>-->
+        <!--<span class="desc-line">0.478023 BTC</span>-->
+      <!--</ion-col>-->
       <ion-col class="coin rs">
         <span class="title">Reais</span>
-        <span class="desc-line">R$ 2.000,00</span>
-        <span class="desc-line">0.478023 BTC</span>
+        <span class="desc-line">R$ {{ usuarioSaldoV }}</span>
+        <!--<span class="desc-line">R$ {{ (usuarioSaldoV).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) }}</span>-->
+        <span class="desc-line">{{ (usuarioSaldoV / cotacaoInfo).toFixed(8) }} BTC</span>
       </ion-col>
     </ion-row>
   </ion-grid>

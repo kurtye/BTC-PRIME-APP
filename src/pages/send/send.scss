@@ -1,6 +1,9 @@
 #page-send {
   font-size: 1.6rem;
 
+  //.carteira{
+  //  font-size: 5px;
+  //}
   .descriptions {
     @extend .vertical-align;
     font-size: 1.2rem;
@@ -111,6 +114,14 @@
 
   #btn-send {
     text-transform: lowercase;
+  }
+
+  input.text-input.text-input-ios {
+    text-align: center;
+  }
+
+  input.text-input.text-input-md {
+    text-align: center;
   }
 
 }

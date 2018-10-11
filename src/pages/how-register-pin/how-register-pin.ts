@@ -2,17 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { AlertController } from "ionic-angular";
 
-import { PinRegisterPage } from '../pin-register/pin-register';
 import {QrCodeScanPage} from "../qr-code-scan/qr-code-scan";
-import {TabsControllerPage} from "../tabs-controller/tabs-controller";
-import {PinRegister2Page} from "../pin-register2/pin-register2";
 
-/**
- * Generated class for the HowRegisterPinPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({

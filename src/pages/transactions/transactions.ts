@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { RestProvider } from "../../providers/rest/rest";
 
 interface DayHistory {
   day: number,
@@ -96,9 +97,33 @@ export class TransactionsPage {
     }
   ];
 
+
+  historico: any = {};
+  list: any = {};
+
+
   selectedDate(e) {
     console.log(this.date);
   }
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public restProvider: RestProvider) {}
+
+
+    ionViewDidLoad() {
+
+        this.restProvider.login().subscribe(data => {
+
+          this.historico = data;
+
+          this.list = this.historico.data.mining_user_usuarioHistoricoTransacao
+
+          //this.historico.data.mining_user_usuarioHistoricoTransacao;
+          console.log( this.historico.data.mining_user_usuarioHistoricoTransacao.historico)
+
+            console.log(data)
+
+        });
+
+
+    }
 }

@@ -1,4 +1,5 @@
 import { Component, Input, Output, OnInit, EventEmitter } from "@angular/core";
+import {RestProvider} from "../../providers/rest/rest";
 
 /**
  * Generated class for the CardComponent component.

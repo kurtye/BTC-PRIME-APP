@@ -166,16 +166,25 @@ export class HomePage {
 
     pareamento: any;
 
+    //Informacoes dos usuarios
     users: any;
+    nome: string;
     data: any[];
     user: any = {};
     userInfo: any = {};
 
+    // Lista dos Grupos
     grupos: any = {};
     gurposArray: any = {};
 
+    //Saldo disponivel do usuario
     saldoDisponivel: any = {};
     saldoLiberado: any = {};
+    saldoBitcoin: any;
+
+    //Cotacao atual do BTC
+    cotacao: any = {};
+    cotacaoInfo: any = {};
 
     constructor(
         public navCtrl: NavController,
@@ -190,17 +199,10 @@ export class HomePage {
 
     ionViewDidLoad() {
 
-        let resetApp2 = localStorage.getItem('resetAPP2');
-
-        if (resetApp2 == 'true') {
-            window.location.reload();
-            localStorage.setItem('resetAPP2', 'false');
-        }
-
         this.restProvider.login().subscribe(data => {
+
             console.log(data)
             this.user = data;
-
 
             //PAREAMENTO COM QR CODE E RETORNO DOS DADOS
             this.pareamento = this.user.data.mining_app_usuarioLogarPareamento;
@@ -208,17 +210,35 @@ export class HomePage {
 
             //USERINFO DADOS DO USUARIO
             this.userInfo = this.user.data.mining_user_usuarioInfo;
-            console.log('userInfo', this.userInfo.usuario)
+            console.log('userInfo', this.userInfo.usuario);
 
+            //OBTENDO O VALOR DO BITCOIN QUE O USUARIO POSSUI NA CARTEIRA
+            this.saldoBitcoin = this.userInfo.usuario.saldo_bitcoin;
+            console.log('Saldo BTC - HOME PAGE', this.userInfo.usuario.saldo_bitcoin)
+
+            //PEGANDO A COTACAO ATUAL DO BITCOIN
+            this.cotacao = data;
+            this.cotacaoInfo = this.cotacao.data.mining_public_financeiro_cotacao.cotacao.BTC;
+            console.log('Valor BTC: ' ,this.cotacaoInfo)
+
+            //UTILIZANDO O EVENTS PUBLISH PARA ATUALIZAR MENU LATERAL
             this.events.publish('UpdateMenu', this.userInfo.usuario.nome, this.userInfo.usuario.id,
-                this.userInfo.usuario.saldo_liberado, this.userInfo.usuario.saldo_comissao_venda);
+                this.userInfo.usuario.saldo_liberado, this.userInfo.usuario.saldo_comissao_venda,
+                this.userInfo.usuario.saldo_bitcoin, this.cotacao.data.mining_public_financeiro_cotacao.cotacao.BTC);
+
+
+
 
             console.log('Event Teste : ID', this.userInfo.usuario.id)
             console.log('Event Teste : NOME', this.userInfo.usuario.nome)
             console.log('Event Teste : Saldo', this.userInfo.usuario.saldo_liberado)
             console.log('Event Teste : Saldo', this.userInfo.usuario.saldo_comissao_venda)
 
+            this.nome = this.userInfo.usuario.nome;
+
             console.log('dados', this.user.data.mining_app_usuarioLogarPareamento)
+
+
 
         });
         this.restProvider.login().subscribe(data => {

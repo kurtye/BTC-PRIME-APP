@@ -15,6 +15,11 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+ion-label {
+
+  font-size: 18px !important;
+}
+
 
 ion-content#menu-content {
   background: none !important;
@@ -24,7 +29,7 @@ ion-content#menu-content {
     background-color: color($colors, 'background-menu');
     height: 90%;
       .label-md, .label-ios{
-        font-weight: 200
+        //font-weight: 200
       }
    h1, h2, h3,h5{
     font-weight: 200 !important;
@@ -125,14 +130,15 @@ ion-content#menu-content {
     color: color($colors, 'dark');
     opacity: 0.6;
 
-    h1::before {
-        content: 'RS';
-        position: absolute;
-        background: color($colors, 'background-card');
-        font-size: 0.8em;
-        width: 35px;
-        padding-top: 5px;
-    }
+    //h1::before {
+    //    content: 'RS';
+    //    position: absolute;
+    //    background: color($colors, 'background-card');
+    //    font-size: 0.8em;
+    //    width: 35px;
+    //    padding-top: 5px;
+    //  margin-right: 3px;
+    //}
 
   }
 

@@ -52,12 +52,20 @@
 
       <ion-grid id="days-container">
 
+
         <ion-row class="row-day" *ngFor="let day of monthHistory">
           <ion-col col-3 class="day">{{ day['day'] }}</ion-col>
           <ion-col col-3 class="" text-center>{{ day['status'] }}</ion-col>
           <ion-col col-3 class="coin-name" text-center>{{ day['coin_name'] }}</ion-col>
           <ion-col col-3 class="color-{{ day['status'] }}" text-center>{{ day['exchange'] }}</ion-col>
         </ion-row>
+
+        <!--<ion-row class="row-day" *ngFor="let day of list">-->
+          <!--<ion-col col-3 class="day">{{ day.data_transaction}}</ion-col>-->
+          <!--<ion-col col-3 class="" text-center>{{ day.status }}</ion-col>-->
+          <!--<ion-col col-3 class="coin-name" text-center>{{ day.moeda }}</ion-col>-->
+          <!--<ion-col col-3 class="color-{{ day['status'] }}" text-center>{{ day['exchange'] }}</ion-col>-->
+        <!--</ion-row>-->
 
       </ion-grid>
 

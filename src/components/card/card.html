@@ -6,7 +6,8 @@
           {{ title }}
         </span>
         <h1 class="value" text-center>
-          <span>{{ (value | currency:'BRL').replace('R$ ', '') }}</span>
+          <!--<span>{{ (value | currency:'BRL').replace('R$ ', '') }}</span>-->
+          <p>{{value}}</p>
         </h1>
         <button ion-button clear class="btn-see-chart" (click)="handleClieckedEvent($event)">
           <ion-icon name="{{ iconName }}" class="icon"></ion-icon> {{ buttonLabel }}
